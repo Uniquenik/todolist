@@ -16,6 +16,7 @@ export const NewTodo = () => {
         if (value) {
             setError(false)
             addTodo(value)
+            setValue('')
         }
         else setError(true)
     }
