@@ -8,7 +8,7 @@ const todos = () => {
         todos: initTodos,
         addTodo(title:string){
             store.todos.push({
-                id: store.todos.length && store.todos[store.todos.length-1].id+1 || 0,
+                id: store.todos.length ? store.todos[store.todos.length-1].id+1 : 0,
                 isComplete: false,
                 title: title,
                 datetime: Number(Date.now())
@@ -21,11 +21,8 @@ const todos = () => {
             store.todos[id].isComplete = !store.todos[id].isComplete
         },
         deleteTodo(id:number){
-            store.todos = store.todos.filter(todo => todo.id != id)
+            store.todos = store.todos.filter(todo => todo.id !== id)
         },
-        filterTodos(){
-
-        }
     }
 
     return makeAutoObservable(store)

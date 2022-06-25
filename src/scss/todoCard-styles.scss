@@ -1,10 +1,12 @@
 $primary-color: #007AFE;
 $secondary-color: #EEF6FF;
+$sm: 576px;
 
 @mixin flex-space {
   display: flex;
-  gap: 5px;
+  gap: 10px;
   align-items: center;
+  justify-content: center;
 }
 
 .todo-card {
@@ -17,8 +19,13 @@ $secondary-color: #EEF6FF;
   padding: 1em;
   margin-bottom: 0.8em;
   align-items: center;
+  word-wrap: anywhere;
   &:hover {
     background: rgba($secondary-color, 0.5);
+  }
+  @media only screen and (max-width: $sm) {
+    flex-direction: column;
+    align-items: stretch;
   }
 }
 
@@ -71,10 +78,17 @@ $secondary-color: #EEF6FF;
 
 .todo-card__left{
   @include flex-space;
+  @media only screen and (max-width: $sm) {
+    justify-content: flex-start;
+  }
 }
 
 .todo-card__right {
   @include flex-space;
+  flex-shrink: 0;
+  @media only screen and (max-width: $sm) {
+    justify-content: flex-end;
+  }
   color: gray;
   font-size: 0.8em;
 }
