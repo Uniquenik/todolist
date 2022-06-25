@@ -1,0 +1,22 @@
+$primary-color: #007AFE;
+$secondary-color: #EEF6FF;
+
+
+.todo-list__filter {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 10px 0;
+  margin: 10px 0;
+  border-bottom: black solid 1px;
+}
+
+.todo-list__select {
+  background-color: white;
+  border-radius: 0.3em;
+  border: 1px solid gray;
+  font-size: 14px;
+  flex: 1 1;
+  width: 200px;
+  height: 28px;
+}
