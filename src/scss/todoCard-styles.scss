@@ -9,6 +9,7 @@ $sm: 576px;
   justify-content: center;
 }
 
+
 .todo-card {
   @include flex-space;
   justify-content: space-between;
@@ -91,4 +92,10 @@ $sm: 576px;
   }
   color: gray;
   font-size: 0.8em;
+}
+
+.todo-card__datetime {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
